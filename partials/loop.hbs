@@ -6,14 +6,11 @@
 
   <article class="{{post_class}}">
     <div class="inner">
-      <div
-        data-link="{{url}}"
-        style="cursor:pointer"
-        class="box post-box post-view"
-      >
-        <h2 class="post-title">{{{title}}}</h2>
-        <span class="post-meta">
-          {{t "By"}}
+      <div class="box post-box">
+        <a href="{{url}}" style="text-decoration: none; color:inherit;">
+          <h2 class="post-title">{{{title}}}</h2>
+        </a>
+        <span class="post-meta">{{t "By"}}
           {{authors separator=", "}}
           {{#primary_tag}}{{t "in"}}
             <a class="post-meta-tag" href="{{url}}">{{name}}</a>{{/primary_tag}}
@@ -22,7 +19,10 @@
               format="DD MMM YYYY"
             }}</time>
         </span>
-        <p class="post-excerpt">{{excerpt}}&hellip;</p>
+
+        <a href="{{url}}" style="text-decoration: none; color:inherit;"><p
+            class="post-excerpt"
+          >{{excerpt}}&hellip;</p></a>
       </div>
     </div>
   </article>
@@ -30,9 +30,3 @@
 {{/foreach}}
 
 {{pagination}}
-
-<script type="text/javascript">
-  const view=document.getElementsByClassName('post-view')[0];
-  view.addEventListener('click',function(e){
-  window.location.href=view.dataset.link })
-</script>
