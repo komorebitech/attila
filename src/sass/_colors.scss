@@ -8,8 +8,8 @@
   }
 }
 $color-neutral-98: hsb(215, 1, 98);
-$color-neutral-90: hsb(215, 2, 90);
-$color-neutral-80: hsb(215, 4, 80); // nav, menu, pagination - button border
+$color-neutral-90: #232323;
+$color-neutral-80: #232323; // nav, menu, pagination - button border
 $color-neutral-60: hsb(215, 6, 60); // nav, menu, pagination - button font
 $color-neutral-25: hsb(215, 8, 25);
 $color-neutral-15: hsb(215, 10, 15);
@@ -27,4 +27,4 @@ $color-text-secondary-dark: $color-neutral-60;
 $color-border: $color-neutral-90;
 $color-background: $color-neutral-98;
 $color-border-dark: $color-neutral-25;
-$color-background-dark: #00253f;
+$color-background-dark: #E7E6DD;

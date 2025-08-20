@@ -43,11 +43,12 @@ module.exports = function(grunt) {
       dist: ['dist'],
       all: ['dev', 'dist']
     },
-    sass: {
+    'dart-sass': {
       dev: {
         options: {
+          implementation: require('sass'),
           includePaths: ['<%= config.cssSrcDir %>'],
-          sourceMaps: true
+          sourceMap: true
         },
         files: {
           '<%= config.cssTargetDir %>/style.css': '<%= config.cssSrcDir %>/style.scss'
@@ -55,6 +56,7 @@ module.exports = function(grunt) {
       },
       dist: {
         options: {
+          implementation: require('sass'),
           outputStyle: 'compressed'
         },
         files: {
@@ -86,7 +88,7 @@ module.exports = function(grunt) {
     watch: {
       css: {
         files: '<%=  config.cssSrcDir %>/**/*.scss',
-        tasks: ['sass:dev', 'copy:dev', 'postcss:dev']
+        tasks: ['dart-sass:dev', 'copy:dev', 'postcss:dev']
       },
       js: {
         files: '<%=  config.jsSrcDir %>/**/*.js',
@@ -120,13 +122,13 @@ module.exports = function(grunt) {
   });
 
   grunt.registerTask('build', [
-    'sass:dist',
+    'dart-sass:dist',
     'postcss:dist',
     'copy:dist',
     'uglify'
   ]);
   grunt.registerTask('default', [
-    'sass:dev',
+    'dart-sass:dev',
     'postcss:dev',
     'copy:dev',
     'uglify',

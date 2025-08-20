@@ -24,7 +24,7 @@ html.menu-active {
 }
 
 body {
-  font: 400 1em / 1.5em "TT Norms", sans-serif;
+  font: 400 1em / 1.5em "PT Sans", sans-serif;
   color: $color-text-primary;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -69,7 +69,7 @@ textarea {
     text-rendering: optimizeLegibility;
     color: #000;
     @media (prefers-color-scheme: dark) {
-      color: #fff;
+      color: #002038;
     }
   }
 
@@ -1732,7 +1732,7 @@ textarea {
   text-indent: -1px;
   color: #000;
   @media (prefers-color-scheme: dark) {
-    color: #fff;
+    color: #000;
   }
 
   a {
@@ -1750,6 +1750,7 @@ textarea {
 
 .has-cover .post-title {
   color: #fff;
+  font-family: "PT Sans", serif;
 }
 
 .post-meta {
@@ -2261,7 +2262,7 @@ textarea {
   text-overflow: ellipsis;
   color: #000;
   @media (prefers-color-scheme: dark) {
-    color: #fff;
+    color: #002038;
   }
 }
 
